@@ -174,7 +174,6 @@ public class Car {
 
     public static LocalDate checkValidityPeriod(LocalDate validityPeriod) {
         if (LocalDate.now().isAfter(validityPeriod)) {
-            System.out.println("Страховка просрочена. Оформите новую.");
             return LocalDate.now();
         } else {
             return validityPeriod;
@@ -271,7 +270,7 @@ public class Car {
         return  ". Бренд: " + brand + ", Модель: " + model + ", Объём двигателя: " + engineVolume + " л., Цвет: " + color +
                 ", год выпуска: " + year + ", Страна: " + country + ", коробка передач: " + transmission + ", тип кузова: " + bodyType +
                 ", регистрационный номер: " + registrationNumber + ", количество посадочных мест: " + quantityOfSeats +
-                ", сезонность шин: " + tireSeasonality + " ,";
+                ", сезонность шин: " + tireSeasonality + " ," + key + insurance + '\n';
     }
 }
 
