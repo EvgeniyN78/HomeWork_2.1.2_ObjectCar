@@ -17,21 +17,21 @@ public class Amphibians extends Animals {
     //    regionMethods
     @Override
     public void eat() {
-
+        System.out.println("Питается насекомыми");
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("Спит на суше");
     }
 
     @Override
     public void go() {
-
+        System.out.println("Плавает в воде, и перемещается по суше");
     }
 
     public void hunt() {
-
+        System.out.println("Охотится на насекомых");
     }
 
 //    endregion

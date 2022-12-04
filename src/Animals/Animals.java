@@ -12,18 +12,10 @@ public abstract class Animals {
 
     public Animals(String name, Integer age, String livingEnvironment) {
         this.name = validateStandardStr(name);
-        this.age = validateStandardInteger(age);
+        this.age = validateStandardInteger(age, 1);
         this.livingEnvironment = validateStandardStr(livingEnvironment);
     }
 
-    @Override
-    public String toString() {
-        return "Animals{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", livingEnvironment='" + livingEnvironment + '\'' +
-                '}';
-    }
 
     //regionGS
     public String getName() {
@@ -39,7 +31,7 @@ public abstract class Animals {
     }
 
     public void setAge(Integer age) {
-        this.age = validateStandardInteger(age);
+        this.age = validateStandardInteger(age, 1);
     }
 
     public String getLivingEnvironment() {
@@ -49,6 +41,7 @@ public abstract class Animals {
     public void setLivingEnvironment(String livingEnvironment) {
         this.livingEnvironment = validateStandardStr(livingEnvironment);
     }
+
     //endregion
 
     public abstract void eat();

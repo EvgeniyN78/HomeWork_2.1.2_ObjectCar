@@ -1,6 +1,6 @@
 package Animals;
 
-public class NotFling extends Birds{
+public class NotFling extends Birds {
     public NotFling(String name, Integer age, String livingEnvironment, String typeOfMovement) {
         super(name, age, livingEnvironment, typeOfMovement);
     }
@@ -31,7 +31,7 @@ public class NotFling extends Birds{
 
     @Override
     public void hunt() {
-        super.hunt();
+        System.out.println("Охотятся днём");
     }
 
     //возможно метод интерфейса:

@@ -1,6 +1,6 @@
 package Animals;
 
-public class Predators extends Mammals{
+public class Predators extends Mammals {
     public Predators(String name, Integer age, String livingEnvironment, Integer movementSpeed, String TypeOfFood) {
         super(name, age, livingEnvironment, movementSpeed, TypeOfFood);
     }
@@ -34,9 +34,10 @@ public class Predators extends Mammals{
     public void walk() {
         super.walk();
     }
-//возможно метод интерфейса:
-//    public void hunt() {
-//
-//    }
+
+    public void hunt() {
+
+        System.out.println("Охотятся в своей среде обитания");
+    }
 
 }

@@ -1,6 +1,6 @@
 package Animals;
 
-public class Herbivores extends Mammals{
+public class Herbivores extends Mammals {
 
     public Herbivores(String name, Integer age, String livingEnvironment, Integer movementSpeed, String TypeOfFood) {
         super(name, age, livingEnvironment, movementSpeed, TypeOfFood);
@@ -26,8 +26,8 @@ public class Herbivores extends Mammals{
         super.walk();
     }
 
-    public void graze() {
-
+    public void grazing() {
+        System.out.println("Пасутся на открытой местности");
     }
 
     @Override

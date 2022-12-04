@@ -1,5 +1,7 @@
 package Animals;
 
+import java.util.Objects;
+
 import static Animals.Validation.validateStandardInteger;
 import static Animals.Validation.validateStandardStr;
 
@@ -9,17 +11,9 @@ public abstract class Mammals extends Animals {
 
     public Mammals(String name, Integer age, String livingEnvironment, Integer movementSpeed, String TypeOfFood) {
         super(name, age, livingEnvironment);
-        this.movementSpeed = validateStandardInteger(movementSpeed);
-        this.TypeOfFood = validateStandardStr(TypeOfFood);
+        this.movementSpeed = validateStandardInteger(movementSpeed, 1);
+        this.TypeOfFood = validateStandardStr(TypeOfFood, "milk");
 
-    }
-
-    @Override
-    public String toString() {
-        return "Mammals{" +
-                "movementSpeed=" + movementSpeed +
-                ", TypeOfFood='" + TypeOfFood + '\'' +
-                '}';
     }
 
     //    regionGS
@@ -40,23 +34,37 @@ public abstract class Mammals extends Animals {
 
     @Override
     public void eat() {
-
+        System.out.println("Регулярно");
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("Ночью");
     }
 
     @Override
     public void go() {
-
+        System.out.println("Передвигаются по суше");
     }
 
     public void walk() {
-
+        System.out.println("Гуляют в среде обитания");
     }
 
 //    endregion
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Mammals mammals = (Mammals) o;
+        return Objects.equals(movementSpeed, mammals.movementSpeed) && Objects.equals(TypeOfFood, mammals.TypeOfFood);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), movementSpeed, TypeOfFood);
+    }
 }

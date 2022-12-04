@@ -1,6 +1,6 @@
 package Animals;
 
-public class Fling extends Birds{
+public class Fling extends Birds {
 
     public Fling(String name, Integer age, String livingEnvironment, String typeOfMovement) {
         super(name, age, livingEnvironment, typeOfMovement);
@@ -32,11 +32,11 @@ public class Fling extends Birds{
 
     @Override
     public void hunt() {
-        super.hunt();
+        System.out.println("Охотятся за насекомыми");
     }
 
     public void fly() {
-
+        System.out.println("Летают, используя крылья");
     }
 
 }
