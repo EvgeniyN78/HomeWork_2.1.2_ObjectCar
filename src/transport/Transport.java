@@ -1,24 +1,29 @@
 package transport;
 
 public abstract class Transport {
-    String brand;
-    String model;
-    final Integer year;
-    final String country;
-    String color;
-    int maxSpeed;
-    double fuelPercentage;
-    String typeOfFuel;
+    protected String brand;
+    protected String model;
+    protected Integer year;
+    protected String country;
+    protected String color;
+    protected Double maxSpeed;
+    protected Double fuelPercentage;
+    protected String typeOfFuel;
 
-    public Transport(String brand, String model, Integer year, String country, String color, int maxSpeed, double fuelPercentage, String typeOfFuel) {
+    public Transport(String brand, String model, Integer year, String country, String color, Double maxSpeed, Double fuelPercentage, String typeOfFuel) {
         this.brand = Validation.validateStandard(brand);
         this.model = Validation.validateStandard(model);
         this.year = Validation.validateYear(year);
         this.country = Validation.validateStandard(country);
         this.color = Validation.validateColor(color);
-        this.maxSpeed = Validation.validateStandardInt(maxSpeed);
+        this.maxSpeed = Validation.validateStandardDouble(maxSpeed);
         this.fuelPercentage = Validation.validateFuelPercentage(fuelPercentage);
         this.typeOfFuel = Validation.validateStandard(typeOfFuel);
+    }
+
+    public Transport(String brand, String model) {
+        this.brand = Validation.validateStandard(brand);
+        this.model = Validation.validateStandard(model);
     }
 
 //regionGetters
@@ -43,7 +48,7 @@ public abstract class Transport {
         return color;
     }
 
-    public int getMaxSpeed() {
+    public Double getMaxSpeed() {
         return maxSpeed;
     }
 
@@ -72,8 +77,8 @@ public abstract class Transport {
         this.color = Validation.validateColor(color);
     }
 
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = Validation.validateStandardInt(maxSpeed);
+    public void setMaxSpeed(Double maxSpeed) {
+        this.maxSpeed = Validation.validateStandardDouble(maxSpeed);
     }
 
     public void setFuelPercentage(double fuelPercentage) {

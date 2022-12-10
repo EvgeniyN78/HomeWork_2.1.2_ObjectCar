@@ -13,7 +13,7 @@ public class Validation {
         return value != null && value > -1 ? value : 0;
     }
 
-    public static double validateStandardDouble(double value) {
+    public static Double validateStandardDouble(Double value) {
         return value > -0.01 ? value : 0.0;
     }
 
@@ -28,7 +28,7 @@ public class Validation {
         return value != null && !value.isEmpty() && !value.isBlank() ? value : "белый";
     }
 
-    public static double validateEngineVolume(double value) {
+    public static Double validateEngineVolume(Double value) {
         return value <= 0 ? value : 1.5;
     }
 
