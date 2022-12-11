@@ -1,6 +1,6 @@
 public abstract class Driver {
 
-    private static String name;
+    private String name;
     private String driverLicense;
     private Integer experience;
 
@@ -8,10 +8,9 @@ public abstract class Driver {
         this.name = name;
         this.driverLicense = driverLicense;
         this.experience = experience;
-
     }
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 

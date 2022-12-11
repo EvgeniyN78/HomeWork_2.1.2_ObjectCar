@@ -1,8 +1,8 @@
-package Animals;
+package animals;
 
 import java.util.Objects;
 
-import static Animals.Validation.validateStandardStr;
+import static animals.Validation.validateStandardStr;
 
 public abstract class Birds extends Animals {
     protected String typeOfMovement;

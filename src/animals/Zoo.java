@@ -1,6 +1,4 @@
-package Animals;
-
-import java.util.Objects;
+package animals;
 
 public class Zoo {
     public static void main(String[] args) {
@@ -109,18 +107,6 @@ public class Zoo {
         falcon.hunt();
 
     }
-//
-//    public static void comparison() {
-//        if ()
-//    }
-
-//    @Override
-//    public static boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Animals animals = (Animals) o;
-//        return Objects.equals(name, animals.name);
-//    }
 
 
 }

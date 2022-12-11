@@ -1,13 +1,14 @@
-package Animals;
+package animals;
 
-public class NotFling extends Birds {
-    public NotFling(String name, Integer age, String livingEnvironment, String typeOfMovement) {
+public class Fling extends Birds {
+
+    public Fling(String name, Integer age, String livingEnvironment, String typeOfMovement) {
         super(name, age, livingEnvironment, typeOfMovement);
     }
 
     @Override
     public String toString() {
-        return "Птицы нелетающие: " +
+        return "Птицы летающие: " +
                 "наименование: " + name +
                 ", возраст: " + age +
                 ", среда обитания: " + livingEnvironment +
@@ -31,13 +32,11 @@ public class NotFling extends Birds {
 
     @Override
     public void hunt() {
-        System.out.println("Охотятся днём");
+        System.out.println("Охотятся за насекомыми");
     }
 
-    //возможно метод интерфейса:
-//    @Override
-//    public void walk() {
-//        super.walk();
-//    }
+    public void fly() {
+        System.out.println("Летают, используя крылья");
+    }
 
 }

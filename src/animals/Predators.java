@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 public class Predators extends Mammals {
     public Predators(String name, Integer age, String livingEnvironment, Integer movementSpeed, String TypeOfFood) {

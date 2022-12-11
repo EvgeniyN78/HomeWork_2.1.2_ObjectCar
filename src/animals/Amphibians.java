@@ -1,4 +1,4 @@
-package Animals;
+package animals;
 
 public class Amphibians extends Animals {
 

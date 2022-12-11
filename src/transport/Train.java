@@ -9,7 +9,7 @@ public class Train extends Transport {
     private int quantityWagons;
 
     public Train(String brand, String model, int year, String country, String color, int priceTrip, double travelTime,
-                 String nameDepartureStation, String finalStop, int quantityWagons, int maxSpeed, double fuelPercentage, String typeOfFuel) {
+                 String nameDepartureStation, String finalStop, int quantityWagons, Double maxSpeed, double fuelPercentage, String typeOfFuel) {
         super(brand, model, year, country, color, maxSpeed, fuelPercentage, typeOfFuel);
         this.priceTrip = Validation.validateStandardInt(priceTrip);
         this.travelTime = Validation.validateStandardDouble(travelTime);
@@ -65,9 +65,9 @@ public class Train extends Transport {
 
     @Override
     public String toString() {
-        return "Поезд: наименование: " + '\"' + brand + '\"' + ", модель: " + model + ", страна: " + country +
-                ", год: " + year + ", цвет: " + color + ", количество вагонов: " + quantityWagons +
-                ", максимальная скорость: " + maxSpeed + "км/ч., станция отправления: " + nameDepartureStation +
+        return "Поезд: наименование: "  + getBrand() + ", модель: " + getModel() + ", страна: " + getCountry() +
+                ", год: " + getYear() + ", цвет: " + getColor() + ", количество вагонов: " + quantityWagons +
+                ", максимальная скорость: " + getMaxSpeed() + "км/ч., станция отправления: " + nameDepartureStation +
                 ", станция прибытия: " + finalStop + ", время в пути: " + travelTime + " час., стоимость поездки: " + priceTrip +
                 " руб.";
 
@@ -75,18 +75,18 @@ public class Train extends Transport {
 
     @Override
     public void refill() {
-        if (fuelPercentage < 55) {
-            if (typeOfFuel == "бензин" || typeOfFuel == "дизель") {
+        if (getFuelPercentage() < 55) {
+            if (getTypeOfFuel() == "бензин" || getTypeOfFuel() == "дизель") {
                 System.out.println("Залить " + getTypeOfFuel());
-            } else if (typeOfFuel == "газ") {
+            } else if (getTypeOfFuel() == "газ") {
                 System.out.println("Заправить газом");
-            } else if (typeOfFuel == "электро") {
+            } else if (getTypeOfFuel() == "электро") {
                 System.out.println("Зарядить до 100%");
             }
         } else {
-            if (typeOfFuel == "бензин" || typeOfFuel == "дизель" || typeOfFuel == "газ") {
+            if (getTypeOfFuel() == "бензин" || getTypeOfFuel() == "дизель" || getTypeOfFuel() == "газ") {
                 System.out.println("Топлива достаточно");
-            } else if (typeOfFuel == "электро") {
+            } else if (getTypeOfFuel() == "электро") {
                 System.out.println("Энергии достаточно");
             }
         }

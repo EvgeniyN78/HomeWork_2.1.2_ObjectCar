@@ -1,9 +1,9 @@
-package Animals;
+package animals;
 
 import java.util.Objects;
 
-import static Animals.Validation.validateStandardInteger;
-import static Animals.Validation.validateStandardStr;
+import static animals.Validation.validateStandardInteger;
+import static animals.Validation.validateStandardStr;
 
 public abstract class Animals {
     protected String name;
