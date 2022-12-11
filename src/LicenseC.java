@@ -22,7 +22,7 @@ public class LicenseC<T extends Truck> extends Driver {
         System.out.println("остановиться, заглушить двигатель.");
     }
 
-    public static String getStartMessage(Truck truck) {
+    public String getStartMessage(Truck truck) {
         return "Водитель " + getName() + " управляет автомобилем " + truck.getBrand() + " " +
                 truck.getModel() + ", и будет участвовать в заезде.";
     }

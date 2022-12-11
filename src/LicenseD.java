@@ -21,7 +21,7 @@ public class LicenseD<T extends Buses> extends Driver {
         System.out.println("остановиться, заглушить двигатель.");
     }
 
-    public static String getStartMessage(Buses buses) {
+    public String getStartMessage(Buses buses) {
         return "Водитель " + getName() + " управляет автобусом " + buses.getBrand() + " " + buses.getModel() + ", и будет участвовать в заезде";
     }
 

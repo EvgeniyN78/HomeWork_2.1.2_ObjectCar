@@ -121,18 +121,18 @@ public class Main {
         LicenseB klimov = new LicenseB("Климов И.И.", "B", 19);
 
 
-        System.out.println(LicenseB.getStartMessage(ford));
-        System.out.println(LicenseB.getStartMessage(volvo));
-        System.out.println(LicenseB.getStartMessage(toyota));
-        System.out.println(LicenseB.getStartMessage(volkswagen));
-        System.out.println(LicenseC.getStartMessage(kamaz));
-        System.out.println(LicenseC.getStartMessage(renault));
-        System.out.println(LicenseC.getStartMessage(daf));
-        System.out.println(LicenseC.getStartMessage(scania));
-        System.out.println(LicenseD.getStartMessage(yutong));
-        System.out.println(LicenseD.getStartMessage(neoplan));
-        System.out.println(LicenseD.getStartMessage(maz));
-        System.out.println(LicenseD.getStartMessage(liaz));
+        System.out.println(prohorov.getStartMessage(ford));
+        System.out.println(shalyapin.getStartMessage(volvo));
+        System.out.println(sidorov.getStartMessage(toyota));
+        System.out.println(klimov.getStartMessage(volkswagen));
+        System.out.println(tarasov.getStartMessage(kamaz));
+        System.out.println(panov.getStartMessage(renault));
+        System.out.println(costin.getStartMessage(daf));
+        System.out.println(livanov.getStartMessage(scania));
+        System.out.println(ivanov.getStartMessage(yutong));
+        System.out.println(fedorov.getStartMessage(neoplan));
+        System.out.println(smirnov.getStartMessage(maz));
+        System.out.println(carpov.getStartMessage(liaz));
 
 
     }
