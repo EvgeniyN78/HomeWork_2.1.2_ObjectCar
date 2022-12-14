@@ -1,8 +1,27 @@
 package transport;
 
 public class Truck extends Car implements Competing {
-    public Truck(String brand, String model, Double engineVolume, Integer pitStop, Double maxSpeed, Double bestLapTime) {
+
+    protected LoadCapasity loadCapasity;
+
+    public Truck(String brand, String model, Double engineVolume, Integer pitStop, Double maxSpeed,
+                 Double bestLapTime, LoadCapasity loadCapasity) {
         super(brand, model, engineVolume, pitStop, maxSpeed, bestLapTime);
+
+        if (loadCapasity == null) {
+            System.out.println("Не достаточно данных");
+            return;
+        }
+        this.loadCapasity = loadCapasity;
+
+    }
+
+    public LoadCapasity getLoadCapasity() {
+        return loadCapasity;
+    }
+
+    public void setLoadCapasity(LoadCapasity loadCapasity) {
+        this.loadCapasity = loadCapasity;
     }
 
     @Override
@@ -30,6 +49,28 @@ public class Truck extends Car implements Competing {
     @Override
     public void maxSpeed() {
         System.out.println("Зафиксирована максимальная скорость.");
+
+    }
+
+    @Override
+    public String toString() {
+        return "Грузовик: " +
+                "наименование: " + brand +
+                ", модель: " + model +
+                " грузоподъёмность: " + loadCapasity;
+    }
+
+    @Override
+    public void printType() {
+        if (loadCapasity == null) {
+            System.out.println("Данных по авто не достоточно");
+        } else {
+            String min = loadCapasity.getMin() == null ? "" : "от " + loadCapasity.getMin();
+            String max = loadCapasity.getMax() == null ? "" : " тонн, до " + loadCapasity.getMax() + " тонн";
+
+            System.out.println("грузоподъёмность: " + loadCapasity);
+
+        }
 
     }
 }

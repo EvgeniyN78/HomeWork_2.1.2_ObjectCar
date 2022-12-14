@@ -85,55 +85,84 @@ public class Main {
 
 //    }
 
-        PassengerCars ford = new PassengerCars("Ford", "focus", 2.2, 2, 220.3, 24.9);
-        PassengerCars volvo = new PassengerCars("Volvo", "s90", 2.0, 3, 230.1, 25.1);
-        PassengerCars toyota = new PassengerCars("Toyota", "hilux", 2.5, 3, 240.8, 24.1);
-        PassengerCars volkswagen = new PassengerCars("Volkswagen", "polo", 2.0, 2, 250.4, 24.02);
+
+
+//        LicenseD ivanov = new LicenseD("Иванов И.И.", "D", 12);
+//        LicenseD fedorov = new LicenseD("Фёдоров И.И.", "D", 22);
+//        LicenseD smirnov = new LicenseD("Смирнов И.И.", "D", 16);
+//        LicenseD carpov = new LicenseD("Карпов И.И.", "D", 32);
+//        LicenseC tarasov = new LicenseC("Тарасов И.И.", "C", 25);
+//        LicenseC panov = new LicenseC("Панов И.И.", "C", 8);
+//        LicenseC costin = new LicenseC("Костин И.И.", "C", 26);
+//        LicenseC livanov = new LicenseC("Ливанов И.И.", "C", 4);
+//        LicenseB prohorov = new LicenseB("Прохоров И.И.", "B", 21);
+//        LicenseB shalyapin = new LicenseB("Шаляпин И.И.", "B", 11);
+//        LicenseB sidorov = new LicenseB("Сидоров И.И.", "B", 7);
+//        LicenseB klimov = new LicenseB("Климов И.И.", "B", 19);
+
+
+//        System.out.println(prohorov.getStartMessage(ford));
+//        System.out.println(shalyapin.getStartMessage(volvo));
+//        System.out.println(sidorov.getStartMessage(toyota));
+//        System.out.println(klimov.getStartMessage(volkswagen));
+//        System.out.println(tarasov.getStartMessage(kamaz));
+//        System.out.println(panov.getStartMessage(renault));
+//        System.out.println(costin.getStartMessage(daf));
+//        System.out.println(livanov.getStartMessage(scania));
+//        System.out.println(ivanov.getStartMessage(yutong));
+//        System.out.println(fedorov.getStartMessage(neoplan));
+//        System.out.println(smirnov.getStartMessage(maz));
+//        System.out.println(carpov.getStartMessage(liaz));
+//        ford.bestLapTime();
+//        ford.pitStop();
+//        ford.maxSpeed();
+
+
+        PassengerCars ford = new PassengerCars("Ford", "focus", 2.2, 2,
+                220.3, 24.9,BodyType.HATCHBACK);
+        PassengerCars volvo = new PassengerCars("Volvo", "s90", 2.0, 3,
+                230.1, 25.1, BodyType.CROSSOVER);
+        PassengerCars toyota = new PassengerCars("Toyota", "hilux", 2.5, 3,
+                240.8, 24.1, BodyType.COUPE);
+        PassengerCars volkswagen = new PassengerCars("Volkswagen", "polo", 2.0, 2,
+                250.4, 24.02, BodyType.SEDAN);
 
         System.out.println(ford);
-        ford.bestLapTime();
-        ford.pitStop();
-        ford.maxSpeed();
+//        System.out.println(volvo);
+//        System.out.println(toyota);
+//        System.out.println(volkswagen);
+        volkswagen.printType();
+
+        Truck kamaz = new Truck("Kamaz", "i750", 11.8, 3, 250.0,
+                51.2, LoadCapasity.N2);
+        Truck renault = new Truck("Renault", "Z400", 10.5, 5, 220.5,
+                45.5, LoadCapasity.N1);
+        Truck daf = new Truck("DAF", "U12", 12.4, 6, 200.5,
+                53.5, LoadCapasity.N3);
+        Truck scania = new Truck("Scania", "DK46", 11.2, 5, 195.5,
+                62.5, LoadCapasity.N2);
+
+        System.out.println(kamaz);
+//        System.out.println(renault);
+//        System.out.println(daf);
+//        System.out.println(scania);
+        kamaz.printType();
+
+        Buses yutong = new Buses("Yutong", "ZK6129H", 14.00, 2,
+                220.5, 42.5, Size.S);
+        Buses neoplan = new Buses("Neoplan", "N5218", 12.00, 3,
+                230.5, 52.5, Size.M);
+        Buses maz = new Buses("Maz", "251", 10.00, 6,
+                195.5, 63.5, Size.L);
+        Buses liaz = new Buses("Liaz", "Cruiz", 12.00, 5,
+                185.5, 65.5, Size.XL);
 
 
-        Truck kamaz = new Truck("Kamaz", "i750", 11.8, 3, 250.0, 51.2);
-        Truck renault = new Truck("Renault", "Z400", 10.5, 5, 220.5, 45.5);
-        Truck daf = new Truck("DAF", "U12", 12.4, 6, 200.5, 53.5);
-        Truck scania = new Truck("Scania", "DK46", 11.2, 5, 195.5, 62.5);
-
-        Buses yutong = new Buses("Yutong", "ZK6129H", 14.00, 2, 220.5, 42.5);
-        Buses neoplan = new Buses("Neoplan", "N5218", 12.00, 3, 230.5, 52.5);
-        Buses maz = new Buses("Maz", "251", 10.00, 6, 195.5, 63.5);
-        Buses liaz = new Buses("Liaz", "Cruiz", 12.00, 5, 185.5, 65.5);
-
-
-        LicenseD ivanov = new LicenseD("Иванов И.И.", "D", 12);
-        LicenseD fedorov = new LicenseD("Фёдоров И.И.", "D", 22);
-        LicenseD smirnov = new LicenseD("Смирнов И.И.", "D", 16);
-        LicenseD carpov = new LicenseD("Карпов И.И.", "D", 32);
-        LicenseC tarasov = new LicenseC("Тарасов И.И.", "C", 25);
-        LicenseC panov = new LicenseC("Панов И.И.", "C", 8);
-        LicenseC costin = new LicenseC("Костин И.И.", "C", 26);
-        LicenseC livanov = new LicenseC("Ливанов И.И.", "C", 4);
-        LicenseB prohorov = new LicenseB("Прохоров И.И.", "B", 21);
-        LicenseB shalyapin = new LicenseB("Шаляпин И.И.", "B", 11);
-        LicenseB sidorov = new LicenseB("Сидоров И.И.", "B", 7);
-        LicenseB klimov = new LicenseB("Климов И.И.", "B", 19);
-
-
-        System.out.println(prohorov.getStartMessage(ford));
-        System.out.println(shalyapin.getStartMessage(volvo));
-        System.out.println(sidorov.getStartMessage(toyota));
-        System.out.println(klimov.getStartMessage(volkswagen));
-        System.out.println(tarasov.getStartMessage(kamaz));
-        System.out.println(panov.getStartMessage(renault));
-        System.out.println(costin.getStartMessage(daf));
-        System.out.println(livanov.getStartMessage(scania));
-        System.out.println(ivanov.getStartMessage(yutong));
-        System.out.println(fedorov.getStartMessage(neoplan));
-        System.out.println(smirnov.getStartMessage(maz));
-        System.out.println(carpov.getStartMessage(liaz));
-
+        System.out.println(yutong);
+//        System.out.println(neoplan);
+//        System.out.println(maz);
+//        System.out.println(liaz);
+        yutong.printType();
 
     }
 

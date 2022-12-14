@@ -2,10 +2,21 @@ package transport;
 
 public class Buses extends Car implements Competing {
 
-    public Buses(String brand, String model, Double engineVolume, Integer pitStop, Double maxSpeed, Double bestLapTime) {
+    private Size size;
+
+    public Buses(String brand, String model, Double engineVolume, Integer pitStop, Double maxSpeed, Double bestLapTime, Size size) {
         super(brand, model, engineVolume, pitStop, maxSpeed, bestLapTime);
+
+        if (size == null) {
+            System.out.println("Не достаточно данных");
+            return;
+        }
+        this.size = size;
     }
 
+    public Size getSize() {
+        return size;
+    }
 
     @Override
     public void startMoving() {
@@ -15,6 +26,19 @@ public class Buses extends Car implements Competing {
     @Override
     public void finishMoving() {
         System.out.println("Остановиться, заглушить двигатель.");
+    }
+
+    @Override
+    public void printType() {
+        if (size == null) {
+            System.out.println("Данных по авто не достоточно");
+        } else {
+            String min = size.getMin() == null ? "" : "от " + size.getMin();
+            String max = size.getMax() == null ? "" : ", до " + size.getMax() + " мест";
+
+            System.out.println("вместимость: " + size);
+        }
+
     }
 
     @Override
@@ -33,4 +57,14 @@ public class Buses extends Car implements Competing {
         System.out.println("Зафиксирована максимальная скорость.");
 
     }
+
+    @Override
+    public String toString() {
+        return "Автобус: " +
+                "наименование: " + brand +
+                ", модель: " + model +
+                ", вместимость: " + size;
+    }
+
+
 }

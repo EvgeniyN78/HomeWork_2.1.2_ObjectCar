@@ -2,8 +2,21 @@ package transport;
 
 public class PassengerCars extends Car implements Competing {
 
-    public PassengerCars(String brand, String model, Double engineVolume, Integer pitStop, Double maxSpeed, Double bestLapTime) {
+    protected BodyType bodyType;
+
+    public PassengerCars(String brand, String model, Double engineVolume, Integer pitStop, Double maxSpeed, Double bestLapTime,
+                         BodyType bodyType) {
         super(brand, model, engineVolume, pitStop, maxSpeed, bestLapTime);
+
+        this.bodyType = bodyType;
+    }
+
+    public BodyType getNameBodyType() {
+        return bodyType;
+    }
+
+    public void setNameBodyType(BodyType nameBodyType) {
+        this.bodyType = nameBodyType;
     }
 
     @Override
@@ -22,7 +35,7 @@ public class PassengerCars extends Car implements Competing {
     }
 
     @Override
-    public void  bestLapTime() {
+    public void bestLapTime() {
         System.out.println("Показано лучшее время.");
     }
 
@@ -34,9 +47,21 @@ public class PassengerCars extends Car implements Competing {
 
     @Override
     public String toString() {
-        return "Легковые автомобили: " +
+        return "Легковой автомобиль: " +
                 "марка: " + brand +
                 ", модель: " + model +
-                ", объём двигателя: " + engineVolume;
+                ", тип кузова: " + getNameBodyType();
+
+    }
+
+    @Override
+    public void printType() {
+        if (bodyType == null) {
+            System.out.println("Данных по авто не достоточно");
+        } else {
+            System.out.println("тип кузова: " + getNameBodyType());
+
+        }
+
     }
 }
