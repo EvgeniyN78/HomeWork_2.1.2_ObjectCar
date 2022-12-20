@@ -61,6 +61,11 @@ public class Truck extends Car implements Competing {
     }
 
     @Override
+    public boolean service() {
+        return Math.random() > 0.75;
+    }
+
+    @Override
     public void printType() {
         if (loadCapasity == null) {
             System.out.println("Данных по авто не достоточно");

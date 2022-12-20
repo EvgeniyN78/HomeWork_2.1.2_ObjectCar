@@ -2,8 +2,8 @@ import transport.Buses;
 
 public class LicenseD<T extends Buses> extends Driver {
 
-    public LicenseD(String name, String driverLicense, Integer experience) {
-        super(name, driverLicense, experience);
+    public LicenseD(String name, String driverLicense, Integer experience, String category) {
+        super(name, driverLicense, experience, category);
     }
 
     @Override

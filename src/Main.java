@@ -127,11 +127,11 @@ public class Main {
         PassengerCars volkswagen = new PassengerCars("Volkswagen", "polo", 2.0, 2,
                 250.4, 24.02, BodyType.SEDAN);
 
-        System.out.println(ford);
+//        System.out.println(ford);
 //        System.out.println(volvo);
 //        System.out.println(toyota);
 //        System.out.println(volkswagen);
-        volkswagen.printType();
+//        volkswagen.printType();
 
         Truck kamaz = new Truck("Kamaz", "i750", 11.8, 3, 250.0,
                 51.2, LoadCapasity.N2);
@@ -142,11 +142,11 @@ public class Main {
         Truck scania = new Truck("Scania", "DK46", 11.2, 5, 195.5,
                 62.5, LoadCapasity.N2);
 
-        System.out.println(kamaz);
+//        System.out.println(kamaz);
 //        System.out.println(renault);
 //        System.out.println(daf);
 //        System.out.println(scania);
-        kamaz.printType();
+//        kamaz.printType();
 
         Buses yutong = new Buses("Yutong", "ZK6129H", 14.00, 2,
                 220.5, 42.5, Size.S);
@@ -158,12 +158,32 @@ public class Main {
                 185.5, 65.5, Size.XL);
 
 
-        System.out.println(yutong);
+        service(ford, volvo, toyota, volkswagen,
+                kamaz, renault, daf, scania,
+                yutong, neoplan, maz, liaz);
+//        System.out.println(yutong);
 //        System.out.println(neoplan);
 //        System.out.println(maz);
 //        System.out.println(liaz);
-        yutong.printType();
+//        yutong.printType();
 
+    }
+
+    private static void service(Car... cars) {
+        for (Car car : cars) {
+            serviceCar(car);
+        }
+
+    }
+
+    private static void serviceCar(Car car) {
+        try {
+            if (!car.service()) {
+                throw new RuntimeException("Автомобиль " + car.getBrand() + " " + car.getModel() + " не прошёл диагностику.");
+            }
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }

@@ -202,6 +202,8 @@ public abstract class Car extends Transport {
         System.out.println("Остановиться, включить паркинг, заглушить машину.");
     }
 
+    public abstract boolean service();
+
 }
 
 
