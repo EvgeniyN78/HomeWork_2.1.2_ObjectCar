@@ -5,8 +5,8 @@ import transport.PassengerCars;
 public class LicenseB <T extends PassengerCars> extends Driver {
 
 
-    public LicenseB(String name, String driverLicense, Integer experience) {
-        super(name, driverLicense, experience);
+    public LicenseB(String name, String driverLicense, Integer experience, String category) {
+        super(name, driverLicense, experience, category);
     }
 
     @Override

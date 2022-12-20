@@ -54,6 +54,12 @@ public class PassengerCars extends Car implements Competing {
 
     }
 
+
+    @Override
+    public boolean service() {
+        return Math.random() > 0.7;
+    }
+
     @Override
     public void printType() {
         if (bodyType == null) {
@@ -62,6 +68,7 @@ public class PassengerCars extends Car implements Competing {
             System.out.println("тип кузова: " + getNameBodyType());
 
         }
+
 
     }
 }

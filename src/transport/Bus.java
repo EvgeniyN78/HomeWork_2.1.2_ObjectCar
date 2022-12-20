@@ -25,6 +25,11 @@ public class Bus extends Transport {
     }
 
     @Override
+    public void printType() {
+
+    }
+
+    @Override
     public String toString() {
         return "Автобус:" +
                 " наименование: " + getBrand() + ", модель: " + getModel() +

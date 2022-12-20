@@ -3,8 +3,8 @@ import transport.Truck;
 
 public class LicenseC<T extends Truck> extends Driver {
 
-    public LicenseC(String name, String driverLicense, Integer experience) {
-        super(name, driverLicense, experience);
+    public LicenseC(String name, String driverLicense, Integer experience, String category) {
+        super(name, driverLicense, experience, category);
     }
 
     @Override
